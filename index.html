@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height" />
+    <link rel="icon" href="favicon icon.webp" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Spotify</title>
+    <script src="https://kit.fontawesome.com/bf3cb1a606.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container bg-black">
+        <!-- Aside Container -->
+        <aside class="aside-container">
+            <div class="home bg-gray">
+                <ul>
+                    <li><img class="invert" src="img/logo.svg" alt="logo" /></li>
+                    <li>
+                        <img class="invert" src="img/home.svg" alt="home" /><span>Home</span
+              >
+            </li>
+            <li>
+              <img class="invert" src="img/search.svg" alt="search" /><span
+                >Search</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-gray">
+          <div class="heading">
+            <img class="invert" src="img/playlist.svg" alt="logo" />
+            <h2>Your Library</h2>
+          </div>
+
+          <div class="sidebar">
+            <div class="create-playlist">
+              <h4>Create your first playlist</h4>
+              <p>it's easy,we'll help you</p>
+              <button>Create playlist</button>
+            </div>
+            <div class="create-playlist">
+              <h4>Let's find some podcasts to follow</h4>
+              <p>We'll keep you updated on new episodes</p>
+              <button>Browse podcasts</button>
+            </div>
+          </div>
+
+          <div class="privacy">
+            <ul>
+              <li>
+                <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                <a href="https://www.spotify.com/in-en/privacy/"
+                  >Safety & Privacy Center</a
+                >
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                  >Cookies</a
+                >
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                  >About Ads</a
+                >
+                <a href="https://www.spotify.com/in-en/accessibility/"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                  >Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="langbtn">
+            <button>English</button>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Container -->
+      <main class="main-section">
+        <!-- Navbar -->
+        <div class="top-nav">
+          <div class="prev-btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onclick="goForward()"
+            >
+              <path
+                d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="buttons">
+            <button class="signupbtn">Sign up</button>
+            <button class="loginbtn" onclick="location.href='loginpage.html';">Log in</button>
+          </div>
+        </div>
+
+        <section class="bg-gray">
+          <!-- Playlist-1 -->
+          <div class="popularArtist">
+            <h1>Popular artist</h1>
+            <div class="cardContainer">
+              <div class="artistCard">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/Pritam.jpeg"
+                  alt=""
+                  onclick="selectArtist('Pritam','img/Pritam.jpeg')"
+                />
+                <h3>Pritam</h3>
+                <p>Artist</p>
+              </div>
+              <div class="artistCard">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/Arijit.jpeg"
+                  alt=""
+                  onclick="selectArtist('Arijit Singh','img/Arijit.jpeg')"
+                />
+                <h3>Arijit Singh</h3>
+                <p>Artist</p>
+              </div>
+              <div class="artistCard">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/Rahman.jpeg"
+                  alt=""
+                  onclick="selectArtist('A.R.Rahman','img/Rahman.jpeg')"
+                />
+                <h3>A.R.Rahman</h3>
+                <p>Artist</p>
+              </div>
+              <div class="artistCard">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/Nigam.jpeg"
+                  alt=""
+                  onclick="selectArtist('Sonu Nigam','img/Nigam.jpeg')"
+                />
+                <h3>Sonu Nigam</h3>
+                <p>Artist</p>
+              </div>
+              <div class="artistCard">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/Anirudh.jpeg"
+                  alt=""
+                  onclick="selectArtist('Anirudh R','img/Anirudh.jpeg')"
+                />
+                <h3>Anirudh R</h3>
+                <p>Artist</p>
+              </div>
+
+              <div class="artistCard">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/Vishal.jpeg"
+                  alt=""
+                  onclick="selectArtist('Vishal Mishra','img/Vishal.jpeg')"
+                />
+                <h3>Vishal Mishra</h3>
+                <p>Artist</p>
+              </div>
+              <div class="artistCard">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/Atif.jpeg"
+                  alt=""
+                  onclick="selectArtist('Atif Aslam','img/Atif.jpeg')"
+                />
+                <h3>Atif Aslam</h3>
+                <p>Artist</p>
+              </div>
+            </div>
+          </div>
+          <!-- Playlist-2 -->
+          <div class="spotifyPlaylists">
+            <h1>Trending Hits </h1>
+            <div class="cardContainer">
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/Img-1.jpg" alt="" />
+                <h3>Side to Side</h3>
+                <p>Ariana Grande  ft.Nicki Minaj </p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/Img-2.jpeg" alt="" />
+                <h3>DÁKITI</h3>
+                <p>BAD BUNNY x JHAY CORTEZ </p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/Img-3.jpeg" alt="" />
+                <h3>Paint The Town Red </h3>
+                <p>Doja Cat </p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/Img-4.jpeg" alt="" />
+                <h3>Harleys In Hawaii</h3>
+                <p>Katy Perry </p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/Img-5.jpeg" alt="" />
+                <h3>Gym Class Heroes</h3>
+                <p>Stereo Hearts ft.Adam Levine</p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/Img-6.jpeg" alt="" />
+                <h3>Baby</h3>
+                <p>Justin Bieber, Ludacris</p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/Img-7.jpeg" alt="" />
+                <h3>Without Me<h3>
+                <p>Halsey</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Playlist-3 -->
+
+          <div class="spotifyPlaylists">
+            <h1>Popular Albums</h1>
+            <div class="cardContainer">
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/img1.jpeg"
+                  alt=""
+                  onclick="selectAlbums('ANIMAL','img/img1.jpeg')"
+                />
+                <h3>ANIMAL</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/img2.jpeg"
+                  alt=""
+                  onclick="selectAlbums('Jab We Meet','img/img2.jpeg')"
+                />
+                <h3>Jab We Met</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img
+                  src="img/img3.jpeg"
+                  alt=""
+                  onclick="selectAlbums('Shershaah','img/img3.jpeg')"
+                />
+                <h3>SHERSHAAH</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/img7.jpeg" alt="" />
+                <h3>PUSHPA</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/img4.jpeg" alt="" />
+                <h3>Kabir Singh</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/img5.jpeg" alt="" />
+                <h3>Teri baaton mein aisa uljha jiya</h3>
+                <p></p>
+              </div>
+              <div class="card">
+                <div class="playbtn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 22 22"
+                    fill="solid"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 20V4L19 12L5 20Z"
+                      stroke="#141B34"
+                      stroke-width="0"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <img src="img/img6.jpeg" alt="" />
+                <h3>Pathaan</h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section bg-gray">
+          <div class="footer">
+            <div class="footer-links">
+              <div class="footer-column">
+                <div>Company</div>
+                <ul class="col-links">
+                  <li><a href="">About</a></li>
+                  <li><a href="">Jobs</a></li>
+                  <li><a href="">For the Record</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <div>Communities</div>
+                <ul class="col-links">
+                  <li><a href="">For Artists</a></li>
+                  <li><a href="">Developers</a></li>
+                  <li><a href="">Advertising</a></li>
+                  <li><a href="">Investors</a></li>
+                  <li><a href="">Vendors</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <div>Usefull links</div>
+                <ul class="col-links">
+                  <li><a href="">Support</a></li>
+                  <li><a href="">Free Mobile App</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <div>Spotify Plans</div>
+                <ul class="col-links">
+                  <li><a href="">Premium Individual</a></li>
+                  <li><a href="">Premium Duo</a></li>
+                  <li><a href="">Premium Family</a></li>
+                  <li><a href="">Premium Student</a></li>
+                  <li><a href="">Spotify Free</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="social-links">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </div>
+          <hr />
+          <div class="Copyright">
+            <p>© 2024 Spotify AB</p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
+
+<script>
+  function selectArtist(artistName, imageUrl) {
+    // Store the image URL in localStorage
+    localStorage.setItem("selectedArtistName", artistName);
+    localStorage.setItem("selectedArtistImage", imageUrl);
+
+    // Optionally, navigate to the second page
+    window.location.href = "PlaylistPage.html";
+  }
+
+  function selectAlbums(albumName, imageUrl) {
+    // Store the image URL in localStorage
+    localStorage.setItem("selectedAlbumsName", albumName);
+    localStorage.setItem("selectedAlbumsImage", imageUrl);
+
+    // Optionally, navigate to the second page
+    window.location.href = "PopularAlbums.html";
+  }
+
+  // Function to navigate forward to the next page
+  function goForward() {
+    history.forward();
+  }
+</script>
